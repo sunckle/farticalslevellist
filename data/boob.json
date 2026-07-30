@@ -1,0 +1,18 @@
+{
+    "id": 145361266,
+    "name": "Boob Type Wave",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/CH6lBgJUQVI",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=8v7v2XFjE4Q",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": 138580260,
+    "name": "SLH Ea Buffed Buffed",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/kRWLnm3pSVc",
+    "percentToQualify": "40",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=oW_DRmG9T_8",
+            "percent": 60,
+            "hz": 60
+        }
+    ]
+}

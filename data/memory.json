@@ -1,0 +1,18 @@
+{
+    "id": 140047006,
+    "name": "Memory type level",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/WP7_ehjEHA0",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=0Phuuq0DJJI",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

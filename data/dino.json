@@ -1,0 +1,21 @@
+{
+    "id": 141644646,
+    "name": "Denomint",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Unverified",
+    "verification": "https://youtu.be/UCKhbVRuzBU",
+    "percentToQualify": 20,
+    "password": "Copyable",
+
+    "screenshots": [
+        "denomint #1.png",
+        "denomint #2.png",
+        "denomint #3.png"
+    ],
+
+    "records": [
+        {
+        }
+    ]
+}

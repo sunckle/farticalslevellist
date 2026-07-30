@@ -1,0 +1,1202 @@
+.page-list .list-container,
+.page-list .level-container,
+.page-list .meta-container {
+    padding-block: 2rem;
+}
+
+.page-list .list-container {
+    padding-inline: 1rem;
+}
+
+.page-list .meta-container {
+    padding-right: 2rem;
+}
+
+.page-list .list {
+    table-layout: auto;
+    border-spacing: 0 .65rem;
+    border-collapse: separate;
+}
+
+.page-list .list .rank {
+    text-align: end;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+
+.page-list .list .level {
+    width: 100%;
+}
+
+.page-list .list .level button {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    color: var(--color-on-background);
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+
+    padding: .7rem 1rem;
+
+    text-align: start;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.10);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+/* Light sweep animation */
+
+.page-list .list .level button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.10),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left .7s ease;
+}
+
+.page-list .list .level button:hover::before {
+    left: 150%;
+}
+
+.page-list .list .level.error button {
+    color: var(--color-error);
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.page-list .list .level button:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(111,171,209,.35);
+
+    box-shadow:
+        0 18px 36px rgba(0,0,0,.18),
+        0 0 24px rgba(111,171,209,.18);
+}
+
+.page-list .list .level button:active {
+    transform: scale(.98);
+}
+
+.page-list .list .level.active button {
+
+    background: linear-gradient(
+        135deg,
+        #72c6ff,
+        #4d88ff,
+        #6FABD1
+    );
+
+    background-size: 250% 250%;
+
+    animation: selectedGlow 4s ease infinite;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transform: translateX(8px);
+
+    box-shadow:
+        0 0 18px rgba(111,171,209,.45),
+        0 0 35px rgba(111,171,209,.25),
+        0 14px 30px rgba(76,127,176,.35);
+
+}
+
+.page-list .level-container .level {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: none;
+
+    gap: 2rem;
+
+    padding: 2rem;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.12);
+
+    animation: levelInfo .35s ease;
+}
+
+
+
+.page-list .level-container .level .video:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(111,171,209,.45);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        0 0 40px rgba(111,171,209,.30);
+}
+
+.page-list .level-container .level .level-authors {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+}
+
+.page-list .level-container .level .video {
+    aspect-ratio: 16/9;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.18);
+}
+
+.page-list .level-container .level .stats {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 1rem;
+}
+
+.page-list .level-container .level .stats li {
+    list-style: none;
+
+    padding: 1.2rem;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.04)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+}
+
+.page-list .level-container .level .stats li:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(111,171,209,.22);
+}
+
+.page-list .level-container .level .stats li p {
+    margin-top: .75rem;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+}
+
+.page-list .level-container .level .records {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0 .65rem;
+}
+
+.page-list .level-container .level .records tr {
+    background: rgba(255,255,255,.04);
+
+    border-radius: 12px;
+
+    transition:
+        transform .25s,
+        background .25s;
+}
+
+.page-list .level-container .level .records tr:hover {
+    background: rgba(111,171,209,.12);
+
+    transform: translateX(6px);
+}
+
+.page-list .level-container .level .records td {
+    padding: .9rem 1rem;
+}
+
+.page-list .level-container .level .records td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.page-list .level-container .level .records td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.page-list .level-container .level .records .percent,
+.page-list .level-container .level .records .hz {
+    width: 80px;
+    text-align: right;
+}
+
+.page-list .level-container .level .records .user {
+    width: 100%;
+}
+
+.page-list .meta-container .og a:hover,
+.page-list .level-container .level .records a:hover {
+    text-decoration: underline;
+}
+
+.page-list .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page-list .meta .errors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-list .meta .errors .error {
+    padding: 1rem;
+
+    background: linear-gradient(
+        135deg,
+        #de0000,
+        #b30000
+    );
+
+    color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 20px rgba(222,0,0,.25);
+}
+
+.page-list .meta .editors {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.page-list .meta .editors li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.page-list .meta .editors li img {
+    height: 1.25rem;
+    transition: transform .25s;
+}
+
+.page-list .meta .editors li:hover img {
+    transform: scale(1.1);
+}
+
+.page-list .meta .editors li a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+.page-list .list tr {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: levelFade .4s ease forwards;
+}
+
+.page-list .list tr:nth-child(1) { animation-delay: .02s; }
+.page-list .list tr:nth-child(2) { animation-delay: .04s; }
+.page-list .list tr:nth-child(3) { animation-delay: .06s; }
+.page-list .list tr:nth-child(4) { animation-delay: .08s; }
+.page-list .list tr:nth-child(5) { animation-delay: .10s; }
+.page-list .list tr:nth-child(6) { animation-delay: .12s; }
+.page-list .list tr:nth-child(7) { animation-delay: .14s; }
+.page-list .list tr:nth-child(8) { animation-delay: .16s; }
+.page-list .list tr:nth-child(9) { animation-delay: .18s; }
+.page-list .list tr:nth-child(10) { animation-delay: .20s; }
+.page-list .list tr:nth-child(11) { animation-delay: .22s; }
+.page-list .list tr:nth-child(12) { animation-delay: .24s; }
+.page-list .list tr:nth-child(13) { animation-delay: .26s; }
+.page-list .list tr:nth-child(14) { animation-delay: .28s; }
+.page-list .list tr:nth-child(15) { animation-delay: .30s; }
+.page-list .list tr:nth-child(16) { animation-delay: .32s; }
+.page-list .list tr:nth-child(17) { animation-delay: .34s; }
+.page-list .list tr:nth-child(18) { animation-delay: .36s; }
+.page-list .list tr:nth-child(19) { animation-delay: .38s; }
+.page-list .list tr:nth-child(20) { animation-delay: .40s; }
+
+@keyframes levelFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes levelInfo {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===========================
+   Placement Colors
+=========================== */
+
+/* Top 10 */
+
+.page-list .list tr:nth-child(-n+10) .level button {
+    border-left: 5px solid #ff4b4b;
+}
+
+.page-list .list tr:nth-child(-n+10) .level button:hover {
+    box-shadow:
+        0 12px 24px rgba(255,75,75,.35),
+        0 0 18px rgba(255,75,75,.25);
+}
+
+/* Top 25 */
+
+.page-list .list tr:nth-child(n+11):nth-child(-n+25) .level button {
+    border-left: 5px solid #ff9b30;
+}
+
+.page-list .list tr:nth-child(n+11):nth-child(-n+25) .level button:hover {
+    box-shadow:
+        0 12px 24px rgba(255,155,48,.35),
+        0 0 18px rgba(255,155,48,.25);
+}
+
+/* Top 50 */
+
+.page-list .list tr:nth-child(n+26):nth-child(-n+50) .level button {
+    border-left: 5px solid #ffd84a;
+}
+
+.page-list .list tr:nth-child(n+26):nth-child(-n+50) .level button:hover {
+    box-shadow:
+        0 12px 24px rgba(255,216,74,.35),
+        0 0 18px rgba(255,216,74,.25);
+}
+
+/* Everything else */
+
+.page-list .list tr:nth-child(n+51) .level button {
+    border-left: 5px solid #6FABD1;
+}
+
+
+/* ===========================
+   Search Bar
+=========================== */
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: .85rem 1rem;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.05);
+    color: var(--color-on-background);
+
+    outline: none;
+
+    font-size: .95rem;
+
+    transition: .25s;
+}
+
+.search-box input:focus {
+    border-color: #6FABD1;
+
+    box-shadow:
+        0 0 20px rgba(111,171,209,.25);
+}
+
+@keyframes selectedGlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* ===========================
+   Modern Cards
+=========================== */
+
+.page-list .level-container .level,
+.page-list .meta {
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    padding: 2rem;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.20);
+
+}
+
+/* ===========================
+   Better Headings
+=========================== */
+
+.page-list h1 {
+
+    font-size: 2.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: -.04em;
+
+    margin-bottom: .25rem;
+
+}
+
+.page-list h2 {
+
+    margin-top: 2rem;
+
+    border-bottom: 2px solid rgba(111,171,209,.25);
+
+    padding-bottom: .5rem;
+
+}
+
+/* ===========================
+   Better Stats
+=========================== */
+
+.page-list .stats {
+
+    margin: 2rem 0;
+
+}
+
+.page-list .stats li {
+
+    background: rgba(255,255,255,.04);
+
+    border-radius: 18px;
+
+    padding: 1.25rem;
+
+    min-width: 120px;
+
+    transition: .3s;
+
+}
+
+.page-list .stats li:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.20);
+
+}
+
+/* ===========================
+   Records
+=========================== */
+
+.page-list .records tr {
+
+    transition: .25s;
+
+}
+
+.page-list .records tr:hover {
+
+    background: rgba(111,171,209,.08);
+
+}
+
+/* ===========================
+   Featured Level
+=========================== */
+
+.featured-level{
+
+    margin-bottom:1.5rem;
+
+    padding:1.5rem;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6FABD1,
+            #4C7FB0,
+            #3A6AA5
+        );
+
+    background-size:250% 250%;
+
+    animation:
+        selectedGlow 8s ease infinite;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.featured-level:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 0 30px rgba(111,171,209,.35),
+        0 24px 60px rgba(0,0,0,.35);
+
+}
+
+.featured-title{
+
+    font-size:.8rem;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    opacity:.8;
+
+}
+
+.featured-level h2{
+
+    margin:.5rem 0;
+
+    font-size:2rem;
+
+}
+
+.featured-level {
+
+    margin-bottom: 1.5rem;
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6FABD1,
+            #4C7FB0,
+            #355E8A
+        );
+
+    background-size: 250% 250%;
+
+    animation: featuredMove 8s ease infinite;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.25);
+
+    transition: .3s;
+
+}
+
+
+.featured-level:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 35px rgba(111,171,209,.5),
+        0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+.featured-title {
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    opacity: .8;
+
+}
+
+
+.featured-level h2 {
+
+    margin: .5rem 0;
+
+    font-size: 2rem;
+
+}
+
+
+@keyframes featuredMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* =================================
+   Featured Demon Card
+================================= */
+
+.featured-level {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+    padding: 2rem;
+
+    border-radius: 24px;
+
+    color: white;
+
+    cursor: pointer;
+
+
+    background:
+        linear-gradient(
+            135deg,
+            #6FABD1,
+            #4C7FB0,
+            #283593
+        );
+
+
+    background-size: 300% 300%;
+
+    animation:
+        featuredGradient 8s ease infinite;
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.35),
+
+        0 0 40px rgba(111,171,209,.35);
+
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+
+.featured-level:hover {
+
+    transform:
+
+        translateY(-8px)
+        scale(1.02);
+
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.45),
+
+        0 0 60px rgba(111,171,209,.55);
+
+}
+
+
+
+/* Shine animation */
+
+.featured-level::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+
+    width:80%;
+
+    height:100%;
+
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+
+    transform:skewX(-20deg);
+
+
+    animation:
+        featuredShine 5s infinite;
+
+}
+
+
+
+.featured-top {
+
+    font-size:.8rem;
+
+    letter-spacing:.2em;
+
+    text-transform:uppercase;
+
+    opacity:.85;
+
+}
+
+
+
+.featured-level h2 {
+
+    margin:
+
+        .7rem 0;
+
+
+    font-size:
+
+        2.2rem;
+
+
+    font-weight:
+
+        900;
+
+}
+
+
+
+.featured-level p {
+
+    opacity:.9;
+
+}
+
+
+
+.featured-footer {
+
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:1.5rem;
+
+}
+
+
+
+.featured-footer span {
+
+    background:
+
+        rgba(255,255,255,.15);
+
+
+    padding:
+
+        .5rem 1rem;
+
+
+    border-radius:
+
+        999px;
+
+
+    backdrop-filter:
+
+        blur(10px);
+
+}
+
+
+
+
+@keyframes featuredGradient {
+
+    0% {
+        background-position:0% 50%;
+    }
+
+
+    50% {
+        background-position:100% 50%;
+    }
+
+
+    100% {
+        background-position:0% 50%;
+    }
+
+}
+
+
+
+@keyframes featuredShine {
+
+    0% {
+        left:-120%;
+    }
+
+
+    25% {
+        left:150%;
+    }
+
+
+    100% {
+        left:150%;
+    }
+
+}
+
+/* ===========================
+   Hero Card
+=========================== */
+
+.level-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1.5rem;
+
+    margin-bottom:2rem;
+
+    padding:1.5rem;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    backdrop-filter:blur(15px);
+
+}
+
+.level-rank{
+
+    width:80px;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+    font-weight:900;
+
+    border-radius:18px;
+
+    color:white;
+
+    background:
+        linear-gradient(135deg,#6FABD1,#4C7FB0);
+
+}
+
+/* ===========================
+   Random Button
+=========================== */
+
+.random-btn{
+
+    width:100%;
+
+    margin-bottom:1rem;
+
+    padding:1rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(135deg,#6FABD1,#4C7FB0);
+
+    transition:.25s;
+
+}
+
+.random-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(111,171,209,.35);
+
+}
+
+/* ===========================
+   Search
+=========================== */
+
+.search-wrapper{
+
+    margin-bottom:1.5rem;
+
+}
+
+.search-wrapper input{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:1rem 1.2rem;
+
+    border:none;
+
+    border-radius:999px;
+
+    outline:none;
+
+    font-size:1rem;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+
+}
+
+.search-wrapper input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:
+        0 0 25px rgba(111,171,209,.45);
+
+}
+
+/* ===========================
+   Records
+=========================== */
+
+.record{
+
+    transition:.25s;
+
+}
+
+.record:hover{
+
+    transform:translateX(10px);
+
+    background:
+        rgba(111,171,209,.08);
+
+}
+
+/* ===========================
+   Rank Bubble
+=========================== */
+
+.rank p{
+
+    display:inline-block;
+
+    padding:.35rem .9rem;
+
+    border-radius:999px;
+
+    background:
+        rgba(111,171,209,.15);
+
+}
+
+.gallery {
+
+    margin-top:2rem;
+
+    padding:1.5rem;
+
+    border-radius:24px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+.gallery-main img {
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+.gallery-thumbnails {
+
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:1rem;
+
+}
+
+
+.gallery-image {
+
+    width:120px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.gallery-image:hover {
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(111,171,209,.6);
+
+}

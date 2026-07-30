@@ -1,0 +1,18 @@
+{
+    "id": 139942602,
+    "name": "Unnerfed Wave 6",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/6wB6yits3uM",
+    "percentToQualify": "30",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=i6NwecY4mjs",
+            "percent": 64,
+            "hz": 60
+        }
+    ]
+}

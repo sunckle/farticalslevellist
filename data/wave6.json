@@ -1,0 +1,18 @@
+{
+    "id": 137745148,
+    "name": "Wave 6",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://www.youtube.com/watch?v=zLbJPyQs0rA",
+    "percentToQualify": 50,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=axqbVe6sL0U",
+            "percent": 78,
+            "hz": 60
+        }
+    ]
+}

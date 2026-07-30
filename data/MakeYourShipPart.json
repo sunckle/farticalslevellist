@@ -1,0 +1,18 @@
+{
+    "id": 139007488,
+    "name": "Make Your Ship Part",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://www.youtube.com/watch?v=AucqROg4_BE",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=2xdmTeRot7g",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

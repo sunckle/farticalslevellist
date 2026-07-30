@@ -1,0 +1,18 @@
+{
+    "id": 137745148,
+    "name": "ashdfjklafs",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://www.youtube.com/watch?v=tPzHd1PtycQ",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=7a1lnNRA0Mo",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

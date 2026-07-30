@@ -1,0 +1,18 @@
+{
+    "id": 131789322,
+    "name": "Lolnabro",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/MlHk1SlCyhY",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=Edgk4xVuzl8",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": 140240073,
+    "name": "Math",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/uDJlm_mIi8I",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=9eQbPlZ3tu8",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

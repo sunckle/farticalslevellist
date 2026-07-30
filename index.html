@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Fartical Demonlist</title>
+
+    <link rel="icon" href="/list_icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/list.css" />
+    <link rel="stylesheet" href="/css/pages/leaderboard.css" />
+    <link rel="stylesheet" href="/css/pages/roulette.css" />
+    <link rel="stylesheet" href="/css/components/nav.css" />
+    <link rel="stylesheet" href="/css/components/btn.css" />
+    <link rel="stylesheet" href="/css/components/tabs.css" />
+
+    <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
+    <script type="module" src="/js/main.js"></script>
+</head>
+
+<body id="app">
+    <header :class="{ dark: store.dark }">
+
+        <div class="logo">
+            <h2>TFD</h2>
+            <p>v1.2.7</p>
+        </div>
+
+        <nav class="nav">
+
+            <router-link class="nav__tab" to="/">
+                <span class="type-label-lg">List</span>
+            </router-link>
+
+            <router-link class="nav__tab" to="/leaderboard">
+                <span class="type-label-lg">Leaderboard</span>
+            </router-link>
+
+            <router-link class="nav__tab" to="/roulette">
+                <span class="type-label-lg">Roulette</span>
+            </router-link>
+
+            <div class="nav__spacer"></div>
+
+            <button
+                class="nav__icon"
+                @click.prevent="store.toggleDark()"
+                title="Toggle Dark Mode"
+            >
+                <img
+                    :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
+                    alt="Dark Mode"
+                />
+            </button>
+
+            <a
+                class="nav__icon"
+                href="https://discord.gg/j4GETs49R"
+                target="_blank"
+                title="Discord"
+            >
+                <img src="/assets/discord.svg" alt="Discord" />
+            </a>
+
+            <a
+                class="nav__cta type-label-lg"
+                href="https://forms.gle/72bHZaYGMY7sW6tx7"
+                target="_blank"
+            >
+                Submit A Record
+            </a>
+
+        </nav>
+
+    </header>
+
+    <router-view v-slot="{ Component }">
+        <transition name="page" mode="out-in">
+            <component
+                :is="Component"
+                :class="{ dark: store.dark }"
+            />
+        </transition>
+    </router-view>
+
+</body>
+</html>

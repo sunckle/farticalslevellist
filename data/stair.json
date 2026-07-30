@@ -1,0 +1,18 @@
+{
+    "id": 142176901,
+    "name": "Wave Staircase",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "Fartical",
+    "verification": "https://youtu.be/LpQ86w-tFP4",
+    "percentToQualify": 40,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=XyU7tlH33DU",
+            "percent": 48,
+            "hz": 60
+        }
+    ]
+}

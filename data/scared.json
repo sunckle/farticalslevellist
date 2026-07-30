@@ -1,0 +1,18 @@
+{
+    "id": 145361705,
+    "name": "Scared Little Guy",
+    "author": "Fartical",
+    "creators": ["Fartical"],
+    "verifier": "xXMyBallsItchXx",
+    "verification": "https://youtu.be/7VDa8Ebaeh4",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Linkin0Bizkit",
+            "link": "https://www.youtube.com/watch?v=N0brWcea7O4",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}

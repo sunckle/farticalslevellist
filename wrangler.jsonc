@@ -1,22 +1,8 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "thefarticaldemonlist",
-  "compatibility_date": "2026-07-29",
+  "compatibility_date": "2026-07-30",
 
   "assets": {
-    "directory": ".",
-    "not_found_handling": "single-page-application"
-  },
-
-  "rules": [
-    {
-      "type": "Text",
-      "globs": [
-        "**/*.js",
-        "**/*.css",
-        "**/*.html",
-        "**/*.json"
-      ]
-    }
-  ]
+    "directory": "."
+  }
 }

@@ -396,6 +396,8 @@ const seed =
     today.getDate();
 
 this.featuredIndex = seed % this.list.length;
+
+this.loading = false;
     },
  methods: {
     embed,

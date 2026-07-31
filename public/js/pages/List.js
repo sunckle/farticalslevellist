@@ -320,6 +320,7 @@ export default {
         currentGalleryImage: "",
         
         search: "",
+        secretCode: "",
         animateLevel: true,
         errors: [],
         roleIconMap,

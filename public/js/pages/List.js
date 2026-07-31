@@ -406,6 +406,10 @@ this.loading = false;
 
 watch: {
 
+    selected() {
+        this.currentGalleryImage = "";
+    },
+
     search() {
         this.selected = 0;
     },

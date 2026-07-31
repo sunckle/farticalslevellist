@@ -1216,3 +1216,31 @@
 .gallery-image:hover {
     transform: scale(1.05);
 }
+
+
+.gallery-preview,
+.page-list .video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.gallery-image {
+    width: 180px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}

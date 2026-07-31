@@ -132,9 +132,9 @@ export default {
     <img
         v-for="image in level.screenshots"
         :key="image"
-        :src="'/photos/' + image"
+        :src="'/' + image"
         class="gallery-image"
-        @click="currentGalleryImage = '/photos/' + image"
+        @click="currentGalleryImage = '/' + image"
         alt="Screenshot"
     >
 

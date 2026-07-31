@@ -1207,3 +1207,12 @@
     margin: 6px 0;
     word-break: break-word;
 }
+
+.gallery-image {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}

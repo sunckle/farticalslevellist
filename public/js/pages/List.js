@@ -372,20 +372,16 @@ export default {
     async mounted() {
     this.list = await fetchList();
 
-    if (this.list) {
-        const today = new Date().toISOString().slice(0, 10);
+   if (this.list) {
+    const today = new Date().toISOString().slice(0, 10);
 
-        let seed = 0;
-        for (let i = 0; i < today.length; i++) {
-            seed += today.charCodeAt(i);
-        }
-
-        const randomIndex = seed % this.list.length;
-
-        const daily = this.list.splice(randomIndex, 1)[0];
-
-        this.list.unshift(daily);
+    let seed = 0;
+    for (let i = 0; i < today.length; i++) {
+        seed += today.charCodeAt(i);
     }
+
+    this.featuredIndex = seed % this.list.length;
+}
 
     this.editors = await fetchEditors();
         const today = new Date();

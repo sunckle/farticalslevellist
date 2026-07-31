@@ -374,6 +374,19 @@ data: () => ({
 },
     async mounted() {
     this.list = await fetchList();
+        let visits = Number(localStorage.getItem("visits") || 0);
+
+visits++;
+
+this.visitCount = visits;
+
+localStorage.setItem("visits", visits);
+
+if (visits === 100) {
+    setTimeout(() => {
+        alert("🏆 Achievement Unlocked!\n\nThanks for visiting The Fartical Demon List 100 times!");
+    }, 1000);
+}
 
    if (this.list) {
     const today = new Date().toISOString().slice(0, 10);

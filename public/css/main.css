@@ -535,3 +535,27 @@ header::after {
     pointer-events: none;
 
 }
+
+.bug-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background: #ff5252;
+    color: white;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: .2s ease;
+    margin-left: 12px;
+}
+
+.bug-button:hover {
+    background: #e53935;
+    transform: translateY(-2px);
+}

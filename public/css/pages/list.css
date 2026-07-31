@@ -1200,3 +1200,10 @@
         0 0 25px rgba(111,171,209,.6);
 
 }
+
+.featured-level h2 {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin: 6px 0;
+    word-break: break-word;
+}

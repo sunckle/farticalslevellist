@@ -124,10 +124,11 @@ export default {
 <div class="gallery-main">
 
     <img
-        :src="currentGalleryImage || '/photos/' + level.screenshots[0]"
-        class="gallery-preview"
-        alt="Screenshot"
-    >
+    :src="currentGalleryImage || '/photos/' + level.screenshots[0]"
+    class="gallery-preview"
+    @click="showGalleryImage = false; currentGalleryImage = ''"
+    alt="Screenshot"
+>
 
 </div>
 

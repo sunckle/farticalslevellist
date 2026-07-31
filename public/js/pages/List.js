@@ -322,6 +322,8 @@ data: () => ({
 
     currentGalleryImage: "",
 
+    visitCount: 0,
+
     secretCode: "",
     goldenButton: false,
 

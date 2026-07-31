@@ -125,3 +125,38 @@
     box-shadow:
         0 14px 30px rgba(0,0,0,.25);
 }
+
+.golden {
+    background: linear-gradient(45deg, gold, #fff59d, gold) !important;
+    color: black !important;
+    animation: goldGlow 1s infinite;
+}
+
+@keyframes goldGlow {
+    0%,100% {
+        box-shadow: 0 0 8px gold;
+    }
+
+    50% {
+        box-shadow: 0 0 25px gold;
+    }
+}
+
+.fartical-mode {
+    animation: rainbow 3s linear infinite;
+}
+
+.fartical-mode * {
+    animation: wiggle .2s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+@keyframes rainbow {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}

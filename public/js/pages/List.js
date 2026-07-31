@@ -102,6 +102,44 @@ export default {
                             :verifier="level.verifier">
                         </LevelAuthors>
 
+                        <div v-if="!currentGalleryImage">
+
+    <iframe
+        class="video"
+        id="videoframe"
+        :src="video"
+        frameborder="0">
+    </iframe>
+
+</div>
+
+<div v-else>
+
+    <img
+        :src="currentGalleryImage"
+        class="gallery-preview"
+        @click="currentGalleryImage = ''"
+        alt="Screenshot"
+    >
+
+</div>
+
+<div
+    v-if="selected < 5 && level.screenshots"
+    class="gallery-thumbnails"
+>
+
+    <img
+        v-for="image in level.screenshots"
+        :key="image"
+        :src="'/photos/' + image"
+        class="gallery-image"
+        @click="currentGalleryImage = '/photos/' + image"
+        alt="Screenshot"
+    >
+
+</div>
+
                         
 
 <div class="gallery-thumbnails">

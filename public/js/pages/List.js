@@ -126,7 +126,6 @@ export default {
     <img
         :src="currentGalleryImage || '/photos/' + level.screenshots[0]"
         class="gallery-preview"
-        @click="showGalleryImage = false; currentGalleryImage = ''"
         alt="Screenshot"
     >
 

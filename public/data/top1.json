@@ -9,9 +9,9 @@
     "password": "Copyable",
 
     "screenshots": [
-        "public/photos/top1-1.png",
-        "public/photos/top1-2.png",
-        "public/photos/top1-3.png"
+        "photos/top1-1.png",
+        "photos/top1-2.png",
+        "photos/top1-3.png"
     ],
 
     "records": [

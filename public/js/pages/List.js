@@ -121,28 +121,29 @@ export default {
         📷 Level Gallery
     </h2>
 
+<div class="gallery-main">
 
-    <div class="gallery-main">
+    <img
+        :src="currentGalleryImage || '/photos/' + level.screenshots[0]"
+        class="gallery-preview"
+        @click="showGalleryImage = false; currentGalleryImage = ''"
+        alt="Screenshot"
+    >
 
-        <img
-            :src="level.screenshots[0]"
-            alt="Screenshot"
-        >
+</div>
 
-    </div>
+<div class="gallery-thumbnails">
 
+    <img
+        v-for="image in level.screenshots"
+        :key="image"
+        :src="'/photos/' + image"
+        class="gallery-image"
+        @click="currentGalleryImage = '/photos/' + image"
+        alt="Screenshot"
+    >
 
-    <div class="gallery-thumbnails">
-
-        <img
-            v-for="image in level.screenshots"
-            :src="image"
-            class="gallery-image"
-            alt="Screenshot"
-        >
-
-    </div>
-
+</div>
 </div>
 
                         <ul class="stats">

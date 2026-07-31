@@ -154,7 +154,6 @@ export default {
     >
 
 </div>
-</div>
 
                         <ul class="stats">
                             <li>

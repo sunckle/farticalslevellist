@@ -188,10 +188,13 @@
 }
 
 .page-list .level-container .level .video {
+    width: 85%;
     aspect-ratio: 16/9;
 
-    border-radius: 16px;
+    display: block;
+    margin: 0 auto 20px;
 
+    border-radius: 16px;
     overflow: hidden;
 
     box-shadow:

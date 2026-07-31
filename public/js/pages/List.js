@@ -393,6 +393,34 @@ const seed =
 
 this.featuredIndex = seed % this.list.length;
 
+this.goldenButton = Math.floor(Math.random() * 1000) === 0;
+
+window.addEventListener("keydown", (e) => {
+
+    if (e.key.length !== 1) return;
+
+    this.secretCode += e.key.toLowerCase();
+
+    if (this.secretCode.length > 9) {
+        this.secretCode = this.secretCode.slice(-9);
+    }
+
+    if (this.secretCode === "fartical") {
+
+        document.body.classList.add("fartical-mode");
+
+        alert("🎉 Fartical Mode Activated!");
+
+        setTimeout(() => {
+            document.body.classList.remove("fartical-mode");
+        }, 15000);
+
+        this.secretCode = "";
+
+    }
+
+});
+        
 this.loading = false;
     },
  methods: {

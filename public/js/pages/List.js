@@ -386,7 +386,7 @@ localStorage.setItem("visits", visits);
 
 if (visits === 100) {
     setTimeout(() => {
-        alert("🏆 Achievement Unlocked!\n\nThanks for visiting The Fartical Demon List 100 times!");
+        alert("Good Job!\n\nYou have officialy visited TFD 100 times!");
     }, 1000);
 }
 

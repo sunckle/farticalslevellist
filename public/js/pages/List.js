@@ -310,22 +310,24 @@ export default {
             </div>
         </main>
     `,
-    data: () => ({
-        list: [],
-        editors: [],
-        loading: true,
-        selected: 0,
-        featuredIndex: 0,
+data: () => ({
+    list: [],
+    editors: [],
+    loading: true,
+    selected: 0,
+    featuredIndex: 0,
 
-        currentGalleryImage: "",
-        
-        search: "",
-        secretCode: "",
-        animateLevel: true,
-        errors: [],
-        roleIconMap,
-        store
-    }),
+    currentGalleryImage: "",
+
+    secretCode: "",
+    goldenButton: false,
+
+    search: "",
+    animateLevel: true,
+    errors: [],
+    roleIconMap,
+    store
+}),
     computed: {
 
     filteredList() {

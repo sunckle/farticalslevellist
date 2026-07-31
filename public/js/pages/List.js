@@ -124,24 +124,6 @@ export default {
 
 </div>
 
-<div
-    v-if="selected < 5 && level.screenshots"
-    class="gallery-thumbnails"
->
-
-    <img
-        v-for="image in level.screenshots"
-        :key="image"
-        :src="'/photos/' + image"
-        class="gallery-image"
-        @click="currentGalleryImage = '/' + image"
-        alt="Screenshot"
-    >
-
-</div>
-
-                        
-
 <div class="gallery-thumbnails">
 
     <img

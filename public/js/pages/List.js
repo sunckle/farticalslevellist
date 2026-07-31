@@ -305,6 +305,9 @@ export default {
                     <p>
                         Once a level falls into legacy, we don't accept records
                         for them.
+
+                        P.S.  typing fartical TOTALLY doesn't do
+                        something
                     </p>
                 </div>
             </div>

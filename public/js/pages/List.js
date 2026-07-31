@@ -292,7 +292,9 @@ export default {
                     </p>
 
                     <p>
-                        Do not use secret routes or bug routes
+                        Do not use secret routes or bug routes, unless it 
+                        is approved by the owner. If you see a bug feel free to report it to 
+                        Fartical.
                     </p>
 
                     <p>

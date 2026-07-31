@@ -296,7 +296,6 @@ export default {
         selected: 0,
         featuredIndex: 0,
 
-        showGalleryImage: false,
         currentGalleryImage: "",
         
         search: "",

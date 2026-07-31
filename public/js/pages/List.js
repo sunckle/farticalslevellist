@@ -322,6 +322,10 @@ export default {
         loading: true,
         selected: 0,
         featuredIndex: 0,
+
+        showGalleryImage: false,
+        currentGalleryImage: "",
+        
         search: "",
         animateLevel: true,
         errors: [],

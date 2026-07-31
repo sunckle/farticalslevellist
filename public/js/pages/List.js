@@ -218,15 +218,15 @@ export default {
 
                     </div>
 
-                </transition>
+<div
+    v-else
+    class="level"
+    style="height:100%;justify-content:center;align-items:center;"
+>
+    <p></p>
+</div>
 
-                <div
-                    v-else
-                    class="level"
-                    style="height:100%;justify-content:center;align-items:center;"
-                >
-                    <p></p>
-                </div>
+</transition>
             </div>
 
             <div class="meta-container">

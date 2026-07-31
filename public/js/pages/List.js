@@ -374,7 +374,7 @@ data: () => ({
 },
     async mounted() {
     this.list = await fetchList();
-        let visits = Number(localStorage.getItem("visits") || 0);
+    let visits = Number(localStorage.getItem("visits") || 0);
 
 visits++;
 

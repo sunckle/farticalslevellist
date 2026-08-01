@@ -211,7 +211,7 @@ export default {
                 return;
             }
 
-            this.showGenerator = true;
+this.showGenerator = true;
 
 const fullList = await fetchList();
 
@@ -224,7 +224,7 @@ const previewLevels = fullList
         video: lvl.verification,
     }));
 
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 45; i++) {
 
     this.generatorLevel =
         previewLevels[
@@ -232,22 +232,25 @@ for (let i = 0; i < 40; i++) {
         ];
 
     await new Promise(resolve =>
-        setTimeout(resolve, 30 + i * 5)
+        setTimeout(resolve, 20 + i * 5)
     );
 
+}
+
+if (fullList.filter(([_, err]) => err).length > 0) {
+
+    this.showGenerator = false;
+
+    this.showToast(
+        "List is currently broken. Wait until it's fixed."
+    );
+
+    return;
 }
 
 this.showGenerator = false;
 
 this.loading = true;
-            if (fullList.filter(([_, err]) => err).length > 0) {
-                this.loading = false;
-                this.showToast(
-                    'List is currently broken. Wait until it\'s fixed to start a roulette.',
-                );
-                return;
-
-            }
 
             const fullListMapped = fullList.map(([lvl, _], i) => ({
                 rank: i + 1,

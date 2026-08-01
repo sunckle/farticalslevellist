@@ -26,7 +26,7 @@ export default {
 
 <div
     class="featured-level"
-    @click="selected = featuredIndex"
+    @click="selected = list.findIndex(([l]) => l?.id === list[featuredIndex][0].id)"
 >
 
     <div class="featured-title">

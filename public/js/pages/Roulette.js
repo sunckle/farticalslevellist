@@ -10,7 +10,31 @@ export default {
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-roulette">
+        <main v-else class="page-roulette">x
+        <div
+    v-if="showGenerator"
+    class="roulette-generator"
+>
+
+    <div class="generator-window">
+
+        <h1>
+            Generating Roulette
+        </h1>
+
+        <img
+            v-if="generatorLevel"
+            :src="getThumbnailFromId(getYoutubeIdFromUrl(generatorLevel.video))"
+            class="generator-thumbnail"
+        >
+
+        <h2 v-if="generatorLevel">
+            {{ generatorLevel.name }}
+        </h2>
+
+    </div>
+
+</div>
             <div class="sidebar">
                 <p class="type-label-md" style="color: #aaa">
                     Shameless copy of the Extreme Demon Roulette by <a href="https://matcool.github.io/extreme-demon-roulette/" target="_blank">matcool</a>.

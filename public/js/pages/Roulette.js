@@ -110,6 +110,8 @@ export default {
         useExtendedList: true,
         toasts: [],
         fileInput: undefined,
+        spinAnimation: false,
+        spinPreview: [],
     }),
     mounted() {
         // Create File Input

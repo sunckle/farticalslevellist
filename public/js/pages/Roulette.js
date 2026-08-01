@@ -154,6 +154,8 @@ export default {
         spinPreview: [],
         showGenerator: false,
         generatorLevel: null,
+        generatorProgress: 0,
+        generatorText: "",
     }),
     mounted() {
         // Create File Input

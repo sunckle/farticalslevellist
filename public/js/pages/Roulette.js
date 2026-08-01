@@ -10,7 +10,7 @@ export default {
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-roulette">x
+        <main v-else class="page-roulette">
         <div
     v-if="showGenerator"
     class="roulette-generator"

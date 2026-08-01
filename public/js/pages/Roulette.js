@@ -195,10 +195,35 @@ export default {
                 return;
             }
 
-            this.loading = true;
+            this.showGenerator = true;
 
-            const fullList = await fetchList();
+const fullList = await fetchList();
 
+const previewLevels = fullList
+    .filter(([lvl]) => lvl)
+    .map(([lvl], i) => ({
+        rank: i + 1,
+        id: lvl.id,
+        name: lvl.name,
+        video: lvl.verification,
+    }));
+
+for (let i = 0; i < 40; i++) {
+
+    this.generatorLevel =
+        previewLevels[
+            Math.floor(Math.random() * previewLevels.length)
+        ];
+
+    await new Promise(resolve =>
+        setTimeout(resolve, 30 + i * 5)
+    );
+
+}
+
+this.showGenerator = false;
+
+this.loading = true;
             if (fullList.filter(([_, err]) => err).length > 0) {
                 this.loading = false;
                 this.showToast(

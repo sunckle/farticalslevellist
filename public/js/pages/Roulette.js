@@ -11,26 +11,42 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-roulette">
-        <div
+
+<div
     v-if="showGenerator"
     class="roulette-generator"
 >
 
-    <div class="generator-window">
+    <div class="generator-card">
 
-        <h1>
+        <div class="generator-title">
             Generating Roulette
-        </h1>
+        </div>
 
-        <img
-            v-if="generatorLevel"
-            :src="getThumbnailFromId(getYoutubeIdFromUrl(generatorLevel.video))"
-            class="generator-thumbnail"
-        >
+        <transition name="fade" mode="out-in">
 
-        <h2 v-if="generatorLevel">
-            {{ generatorLevel.name }}
-        </h2>
+            <div
+                :key="generatorLevel?.id"
+                class="generator-level"
+            >
+
+                <img
+                    v-if="generatorLevel"
+                    :src="getThumbnailFromId(getYoutubeIdFromUrl(generatorLevel.video))"
+                    class="generator-thumbnail"
+                >
+
+                <h2>
+                    {{ generatorLevel?.name }}
+                </h2>
+
+                <p>
+                    #{{ generatorLevel?.rank }}
+                </p>
+
+            </div>
+
+        </transition>
 
     </div>
 

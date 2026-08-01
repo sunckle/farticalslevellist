@@ -112,6 +112,8 @@ export default {
         fileInput: undefined,
         spinAnimation: false,
         spinPreview: [],
+        showGenerator: false,
+        generatorLevel: null,
     }),
     mounted() {
         // Create File Input

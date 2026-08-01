@@ -36,13 +36,26 @@ export default {
                     class="generator-thumbnail"
                 >
 
-                <h2>
-                    {{ generatorLevel?.name }}
-                </h2>
+<h2 class="generator-name">
+    {{ generatorLevel?.name }}
+</h2>
 
-                <p>
-                    #{{ generatorLevel?.rank }}
-                </p>
+<p class="generator-rank">
+    #{{ generatorLevel?.rank }}
+</p>
+
+<div class="generator-progress">
+
+    <div
+        class="generator-progress-fill"
+        :style="{ width: generatorProgress + '%' }"
+    ></div>
+
+</div>
+
+<p class="generator-status">
+    {{ generatorText }}
+</p>
 
             </div>
 

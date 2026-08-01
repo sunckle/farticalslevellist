@@ -231,34 +231,6 @@ this.loading = true;
                 );
                 return;
 
-                async playSpinAnimation() {
-
-    this.spinAnimation = true;
-
-    for (let i = 0; i < 35; i++) {
-
-        this.spinPreview = [];
-
-        for (let j = 0; j < 7; j++) {
-
-            const random =
-                this.levels[
-                    Math.floor(Math.random() * this.levels.length)
-                ];
-
-            this.spinPreview.push(random.name);
-
-        }
-
-        await new Promise(resolve =>
-            setTimeout(resolve, 35 + i * 4)
-        );
-
-    }
-
-    this.spinAnimation = false;
-
-}
             }
 
             const fullListMapped = fullList.map(([lvl, _], i) => ({

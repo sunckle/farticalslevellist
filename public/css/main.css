@@ -559,3 +559,47 @@ header::after {
     background: #e53935;
     transform: translateY(-2px);
 }
+
+
+body {
+    background: linear-gradient(
+        -45deg,
+        #09090b,
+        #131a36,
+        #1e1b4b,
+        #111827
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 18s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}

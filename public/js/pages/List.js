@@ -72,7 +72,7 @@ export default {
                     :class="{ active: selected == i, error: !level }"
                 >
 
-                    <button @click="selected = list.findIndex(([l]) => l?.id === level.id)">
+                    <button @click="selected = i">
 
                         <span class="type-label-lg">
                             {{ level?.name || ('Error (' + err + '.json)') }}

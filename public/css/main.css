@@ -603,3 +603,21 @@ background-position:0% 50%;
 }
 
 }
+
+.level h1 {
+
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #06b6d4,
+        #3b82f6
+    );
+
+    background-size: 300%;
+
+    animation: gradientMove 6s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}

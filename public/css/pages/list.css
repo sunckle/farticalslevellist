@@ -666,24 +666,16 @@
 }
 
 .featured-level {
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6366f1,
+        #3b82f6
+    );
 
-    margin-bottom: 1.5rem;
-
-    padding: 1.5rem;
-
-    border-radius: 20px;
-
-    cursor: pointer;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #6FABD1,
-            #4C7FB0,
-            #355E8A
-        );
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
 
     background-size: 250% 250%;
 

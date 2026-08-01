@@ -461,20 +461,17 @@
 }
 
 .search-box input {
-    width: 100%;
-    padding: .85rem 1rem;
 
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,.08);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
 
-    background: rgba(255,255,255,.05);
-    color: var(--color-on-background);
+    border: 2px solid transparent;
 
-    outline: none;
-
-    font-size: .95rem;
-
-    transition: .25s;
+    background-clip: padding-box;
 }
 
 .search-box input:focus {

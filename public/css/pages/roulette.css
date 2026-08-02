@@ -192,7 +192,9 @@
 
 .generator-card {
 
-    width: 500px;
+    width: 520px;
+    height: 470px;
+
     max-width: 90%;
 
     padding: 28px;
@@ -201,8 +203,8 @@
 
     background: linear-gradient(
         180deg,
-        #4d5872 0%,
-        #3c465d 100%
+        #4d5872,
+        #3c465d
     );
 
     border: 2px solid rgba(255,255,255,.12);
@@ -210,7 +212,12 @@
     box-shadow:
         0 20px 60px rgba(0,0,0,.45);
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
 
     animation: popup .25s ease;
 

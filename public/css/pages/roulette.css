@@ -191,16 +191,29 @@
 }
 
 .generator-card {
-    width: 480px;
+
+    width: 500px;
     max-width: 90%;
-    background: linear-gradient(180deg,#262a38,#171a24);
-    border: 2px solid rgba(255,255,255,.08);
-    border-radius: 18px;
+
     padding: 28px;
-    text-align: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        180deg,
+        #4d5872 0%,
+        #3c465d 100%
+    );
+
+    border: 2px solid rgba(255,255,255,.12);
+
     box-shadow:
-        0 25px 60px rgba(0,0,0,.55),
-        0 0 40px rgba(115,82,255,.25);
+        0 20px 60px rgba(0,0,0,.45);
+
+    text-align: center;
+
+    animation: popup .25s ease;
+
 }
 
 .generator-title {

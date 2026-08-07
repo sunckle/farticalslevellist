@@ -305,6 +305,8 @@ export default {
                     <p>
                         Once a level falls into legacy, we don't accept records
                         for them.
+                        If you beat the daily level then nothing happens, don't expect
+                        a reward
 
                         P.S.  typing fartical TOTALLY doesn't do
                         something
